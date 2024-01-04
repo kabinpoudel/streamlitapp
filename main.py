@@ -10,6 +10,7 @@ srresnet_checkpoint = "./models/checkpoint_srresnet_129.pth.tar"
 srgan = torch.load(srgan_checkpoint,map_location=torch.device(device))['generator']
 srgan.eval()
 srresnet = torch.load(srresnet_checkpoint,map_location=torch.device(device))['model']
+srresnet.eval()
 
 IMAGENAME = 'img.jpg'
 FONT_SIZE = 100
